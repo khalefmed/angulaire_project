@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Liste des Produits</h2>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="searchProducts()"
+      placeholder="Rechercher par nom ou catégorie..."
+      class="search-input"
+    />
+  </div>
+
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Quantité</th>
+        <th>Catégorie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | currency:' MRU ' }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.category }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="filteredProducts.length === 0" class="no-results">
+    Aucun produit trouvé.
+  </p>
+</div>
