@@ -1,0 +1,108 @@
+/* Container */
+.add-container {
+  max-width: 520px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.add-container h2 {
+  text-align: center;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* Form groups */
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 15px;
+}
+
+.form-group input {
+  width: 93%;
+  padding: 12px 14px;
+  border: 1px solid #d0d4dc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+  background: #fdfdfd;
+}
+
+.form-group input:focus {
+  border-color: #4c7df0;
+  box-shadow: 0 0 6px rgba(76, 125, 240, 0.3);
+}
+
+/* Buttons section */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* Primary button */
+.btn-primary {
+  flex: 1;
+  background: #cd0d90;
+  color: white;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 10px rgba(76, 125, 240, 0.25);
+}
+
+.btn-primary:hover {
+  background: #3c6ae2;
+  box-shadow: 0 4px 14px rgba(76, 125, 240, 0.35);
+}
+
+/* Secondary button */
+.btn-secondary {
+  flex: 1;
+  background: #adb5bd;
+  color: white;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #90979f;
+}
+
+/* Success message */
+.success-message {
+  margin-top: 20px;
+  background: #e6f7ed;
+  color: #187a41;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
@@ -16,19 +16,25 @@ export class ProductListComponent implements OnInit {
   filteredProducts: Product[] = [];
   searchTerm: string = '';
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.loadProducts();
   }
 
-loadProducts(): void {
-  this.productService.getProducts().subscribe(data => {
-    this.products = data;
-    this.filteredProducts = [...data];   // ← make sure we have a copy of the full list
-    this.searchProducts();               // ← now it's safe to filter (even if searchTerm is empty)
-  });
-}
+  loadProducts(): void {
+    this.productService.getProducts().subscribe(data => {
+      console.log("Données chargées :", data);
+
+      this.products = data;
+      this.filteredProducts = [...data];
+
+      this.cdr.detectChanges();   // 👈 IMPORTANT
+    });
+  }
 
   searchProducts(): void {
     const term = this.searchTerm.toLowerCase().trim();

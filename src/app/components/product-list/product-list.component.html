@@ -14,7 +14,6 @@
   <table class="product-table">
     <thead>
       <tr>
-        <th>ID</th>
         <th>Nom</th>
         <th>Prix</th>
         <th>Quantité</th>
@@ -23,9 +22,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let product of filteredProducts">
-        <td>{{ product.id }}</td>
         <td>{{ product.name }}</td>
-        <td>{{ product.price | currency:' MRU ' }}</td>
+        <td>{{ product.price }}</td>
         <td>{{ product.quantity }}</td>
         <td>{{ product.category }}</td>
       </tr>

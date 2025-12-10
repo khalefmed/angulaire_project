@@ -1,32 +1,39 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "PC",
       "price": 50000,
       "quantity": 10,
       "category": "Electronique"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Iphone 17",
       "price": 700000,
       "quantity": 5,
       "category": "Electronique"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Chargeur",
       "price": 4000,
       "quantity": 23,
       "category": "Electronique"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Ecouteur",
       "price": 1000,
       "quantity": 124,
       "category": "Electronique"
+    },
+    {
+      "id": "a833",
+      "name": "Aspegic",
+      "price": 700,
+      "quantity": 67,
+      "category": "Médicament"
     }
   ]
 }
