@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "PC",
-      "price": 50000,
+      "price": 75000,
       "quantity": 10,
       "category": "Electronique"
     },
@@ -15,25 +15,18 @@
       "category": "Electronique"
     },
     {
-      "id": "1",
+      "id": "3",
       "name": "Chargeur",
       "price": 4000,
       "quantity": 23,
       "category": "Electronique"
     },
     {
-      "id": "1",
+      "id": "4",
       "name": "Ecouteur",
       "price": 1000,
       "quantity": 124,
       "category": "Electronique"
-    },
-    {
-      "id": "a833",
-      "name": "Aspegic",
-      "price": 700,
-      "quantity": 67,
-      "category": "Médicament"
     }
   ]
 }

@@ -85,3 +85,48 @@ h2 {
   margin-top: 10px;
   font-size: 15px;
 }
+
+
+.actions {
+  text-align: start;
+}
+
+
+
+
+
+.btn-edit {
+  border: 1px solid #6366f1;
+  color : #6366f1;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  margin: 0 4px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.btn-edit:hover {
+  background: #6366f1;
+  color: white;
+  
+}
+
+
+.btn-delete {
+  border: 1px solid red;
+  color : red;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  margin: 0 4px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.btn-delete:hover {
+  background: red;
+  color: white;
+}

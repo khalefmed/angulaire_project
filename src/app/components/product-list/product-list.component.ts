@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
+import { Router } from '@angular/router';  // ← Add this
 
 @Component({
   selector: 'app-product-list',
@@ -18,7 +19,9 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
+    private router: Router,  // ← Add Router
     private cdr: ChangeDetectorRef
+    
   ) {}
 
   ngOnInit(): void {
@@ -47,4 +50,19 @@ export class ProductListComponent implements OnInit {
       );
     }
   }
+
+
+  editProduct(id: number): void {
+    this.router.navigate(['/edit', id]);
+  }
+
+  deleteProduct(id: number, name: string): void {
+    if (confirm(`Voulez-vous vraiment supprimer "${name}" ?`)) {
+      this.productService.deleteProduct(id).subscribe({
+        next: () => this.loadProducts(),
+        error: () => alert('Erreur lors de la suppression')
+      });
+    }
+  }
+  
 }

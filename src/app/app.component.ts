@@ -45,7 +45,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
       background: rgba(255, 255, 255, 0.75);
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       z-index: 1000;
-      padding: 1rem 0;
+      padding: 1rem 30px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
     }
 
